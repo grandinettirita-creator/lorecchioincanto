@@ -7,20 +7,9 @@ body {
 
 /* HERO PRINCIPALE */
 .hero {
-    height: 100vh;
-    background-image: url("sfondo.jpg"); /* puoi cambiarla dopo */
-    background-size: cover;
-    background-position: center;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+    padding: 60px 20px;
+    background: #8EC5FC;
     text-align: center;
-    color: white;
-
-    padding: 20px;
 }
 
 /* TITOLO PRINCIPALE */
