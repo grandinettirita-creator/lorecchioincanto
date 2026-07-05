@@ -2,48 +2,63 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #333;
+    background-color: #ffffff;
 }
 
-/* SFONDO PRINCIPALE (MODIFICABILE) */
+/* HERO PRINCIPALE */
 .hero {
     height: 100vh;
-    background-image: url("sfondo.jpg"); /* <-- QUI cambi immagine */
+    background-image: url("sfondo.jpg"); /* puoi cambiarla dopo */
     background-size: cover;
     background-position: center;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     text-align: center;
     color: white;
+
+    padding: 20px;
 }
 
+/* TITOLO PRINCIPALE */
 .hero h1 {
-    font-size: 3em;
+    font-size: 3.2em;
     margin: 0;
 }
 
+/* SOTTOTITOLO */
+.hero h2 {
+    font-size: 1.4em;
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+/* TESTO */
 .hero p {
-    font-size: 1.2em;
+    font-size: 1.1em;
+    margin-top: 10px;
 }
 
-.button {
-    margin-top: 20px;
-    padding: 12px 20px;
-    background: white;
-    color: black;
-    text-decoration: none;
-    border-radius: 8px;
-}
-
+/* SEZIONI CONTENUTO */
 .content {
     padding: 60px 20px;
     max-width: 800px;
     margin: auto;
 }
 
+/* TITOLI SEZIONI */
+.content h2 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+/* FOOTER (NO RIFERIMENTI ALLA RADIO) */
 footer {
     text-align: center;
     padding: 20px;
     background: #f2f2f2;
+    font-size: 0.9em;
 }
