@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lascia un messaggio - L'Orecchio inCanto</title>
+    <link rel="stylesheet" href="messaggi.css">
+</head>
+
+<body>
+
+<div class="widget-messaggi">
+
+    <h2>Lascia un messaggio</h2>
+
+    <p>Condividi una domanda, un pensiero o la tua esperienza musicale.</p>
+
+    <form name="messaggi" method="POST" data-netlify="true">
+
+        <label>Nome</label>
+        <input type="text" name="nome">
+
+        <label>Email (facoltativa)</label>
+        <input type="email" name="email">
+
+        <label>Messaggio</label>
+        <textarea name="messaggio"></textarea>
+
+        <button type="submit">Invia</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
