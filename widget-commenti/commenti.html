@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Widget Commenti</title>
 
+<link rel="stylesheet" href="commenti.css">
+</head>
+
+<body>
+
+<div class="commenti">
+
+<h3>Aggiungi un commento</h3>
+
+<form id="commentForm">
+
+<input
+type="text"
+id="nome"
+placeholder="Nome *"
+required>
+
+<input
+type="email"
+id="email"
+placeholder="Indirizzo email *"
+required>
+
+<textarea
+id="messaggio"
+placeholder="Messaggio *"
+required></textarea>
+
+<button type="submit">
+Invia commento
+</button>
+
+</form>
+
+<hr>
+
+<h3>Commenti</h3>
+
+<div id="listaCommenti">
+<p>Non ci sono ancora commenti.</p>
+</div>
+
+</div>
+
+<script src="commenti.js"></script>
+
+</body>
+</html>
