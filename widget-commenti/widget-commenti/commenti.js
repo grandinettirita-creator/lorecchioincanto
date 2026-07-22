@@ -1,4 +1,4 @@
-document.getElementById("commentForm").addEventListener("submit", function(event){
+document.getElementById("commentForm").addEventListener("submit", async function(event){
 
     event.preventDefault();
 
@@ -8,6 +8,27 @@ document.getElementById("commentForm").addEventListener("submit", function(event
 
     if(nome === "" || email === "" || messaggio === ""){
         alert("Compila tutti i campi.");
+        return;
+    }
+
+    const risposta = await fetch("/.netlify/functions/salva-commento",{
+
+        method:"POST",
+
+        headers:{
+            "Content-Type":"application/json"
+        },
+
+        body:JSON.stringify({
+            nome:nome,
+            email:email,
+            messaggio:messaggio
+        })
+
+    });
+
+    if(!risposta.ok){
+        alert("Errore durante l'invio del commento.");
         return;
     }
 
@@ -22,9 +43,9 @@ document.getElementById("commentForm").addEventListener("submit", function(event
     const dataOra =
         data.toLocaleDateString("it-IT") +
         " " +
-        data.toLocaleTimeString("it-IT", {
-            hour: "2-digit",
-            minute: "2-digit"
+        data.toLocaleTimeString("it-IT",{
+            hour:"2-digit",
+            minute:"2-digit"
         });
 
     lista.innerHTML += `
